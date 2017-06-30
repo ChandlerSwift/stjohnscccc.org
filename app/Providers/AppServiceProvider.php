@@ -14,7 +14,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        View::share('events', \App\Event::all());
+        View::share('events', \App\Event::where('date', '>', \Carbon\Carbon::now())
+                                        ->orderBy('date', 'asc')
+                                        ->take(2));
     }
 
     /**
