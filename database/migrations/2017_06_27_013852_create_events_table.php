@@ -19,8 +19,8 @@ class CreateEventsTable extends Migration
             $table->text('title');
             $table->date('date');
             $table->text('description');
-            $table->text('linktitle');
-            $table->text('link');
+            $table->text('link_title')->nullable();
+            $table->text('link')->nullable();
             $table->softDeletes();
         });
     }

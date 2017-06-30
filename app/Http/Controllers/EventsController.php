@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Event;
 
 class EventsController extends Controller
 {
@@ -13,7 +14,10 @@ class EventsController extends Controller
      */
     public function index()
     {
-        //
+        return view('events.index')
+            ->with('events', \App\Event::where('date', '>', \Carbon\Carbon::now())->get())
+            ->with('archived_events', \App\Event::where('date', '<', \Carbon\Carbon::now())->get())
+            ->with('deleted_events', \App\Event::onlyTrashed()->get());
     }
 
     /**
@@ -23,7 +27,7 @@ class EventsController extends Controller
      */
     public function create()
     {
-        //
+        return view('events.create');
     }
 
     /**
@@ -34,16 +38,17 @@ class EventsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        \App\Event::create($request->all())->save();
+        return redirect('/admin/events');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  Event $event
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Event $event)
     {
         //
     }
@@ -51,10 +56,10 @@ class EventsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  Event $event
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Event $event)
     {
         //
     }
@@ -63,10 +68,10 @@ class EventsController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  Event $event
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Event $event)
     {
         //
     }
@@ -74,11 +79,20 @@ class EventsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  Event $event
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Event $event)
     {
-        //
+        $event->delete();
+        return back();
+    }
+
+    /** Restore the specified resource */
+    public function restore($id)
+    {
+        $event = Event::withTrashed()->find($id);
+        $event->restore();
+        return redirect('/admin/events');
     }
 }

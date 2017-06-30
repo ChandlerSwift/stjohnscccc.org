@@ -28,5 +28,6 @@ $this->get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm
 $this->post('password/reset', 'Auth\ResetPasswordController@reset');
 
 Route::resource('admin/events', 'EventsController');
+Route::get('admin/events/{id}/restore', 'EventsController@restore');
 
 Route::get('admin', 'AdminController@index')->middleware('auth');

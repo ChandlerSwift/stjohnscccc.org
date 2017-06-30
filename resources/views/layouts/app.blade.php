@@ -12,6 +12,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap-datepicker3.min.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -69,7 +70,7 @@
                 </div>
             </div>
         </nav>
-
+        @if(Auth::check())
         <div class="row" style="margin:0;">
             <div class="col-sm-3">
                 <div class="list-group">
@@ -82,9 +83,15 @@
             <div class="col-sm-9">
                 @yield('content')
             </div>
+        </div>
+        @else
+        @yield('content')
+        @endif
     </div>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/bootstrap-datepicker.min.js') }}"></script>
+    @yield('script')
 </body>
 </html>

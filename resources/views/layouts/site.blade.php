@@ -38,7 +38,7 @@
                 <h2>{{ $event->title }}</h2>
                 <h3>{{ date("F j", strtotime($event->date)) }}</h3>
                 <p>
-                  {{ $event->content }}
+                  {{ $event->description }}
                   @if($event->linktitle != "" && $event->linkcontent != "")
                     <a href="{{ $event->linkcontent }}">{{ $event->linktitle }}</a>
                   @endif
