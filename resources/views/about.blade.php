@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layouts.site')
 @section('content')
             <div class="right_col_section">
               <h1>History of St. John's</h1>

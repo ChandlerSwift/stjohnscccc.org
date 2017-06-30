@@ -1,6 +1,6 @@
-@extends('layout')
+@extends('layouts.site')
 @section('content')
-    <form action="sendmail.php" method="post">
+    <form action="/contact/send" method="post">
     <table cellpadding="5" cellspacing="0" border="0" width="100%">
       <tr>
         <td colspan="2" style="text-align: center;">

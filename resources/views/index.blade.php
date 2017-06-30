@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layouts.site')
 @section('content')
           <div class="right_col_section">
               <div id="welcome_title"></div>
