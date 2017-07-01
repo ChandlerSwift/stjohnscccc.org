@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Carbon\Carbon;
+use App\Mail\ContactForm;
 
 class SiteController extends Controller
 {
@@ -23,6 +24,20 @@ class SiteController extends Controller
 
     public function contact() {
         return view('contact');
+    }
+
+    public function sendMessage(Request $request) {
+        $valid_contacts = ['pastor', 'secretary', 'council', 'tech'];
+        if (in_array($request->input('contact'), $valid_contacts)) {
+            \Mail::to('chandler@chandlerswift.com')->send(new ContactForm(
+                $from_name = $request->input('name'),
+                $from_email = $request->input('email'),
+                $message_text = $request->input('message')
+            ));
+            return 'Success';
+        } else {
+            abort(400, 'Invalid Contact');
+        }
     }
 
 }

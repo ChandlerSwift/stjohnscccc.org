@@ -15,6 +15,7 @@
 Route::get('/', 'SiteController@index');
 Route::get('/about', 'SiteController@about');
 Route::get('/contact', 'SiteController@contact');
+Route::post('/contact/send', 'SiteController@sendMessage');
 
 // Authentication Routes...
 $this->get('login', 'Auth\LoginController@showLoginForm')->name('login');
