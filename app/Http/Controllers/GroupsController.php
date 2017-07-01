@@ -59,7 +59,8 @@ class GroupsController extends Controller
      */
     public function edit(Group $group)
     {
-        //
+        return view('groups.edit')
+            ->with('group', $group);
     }
 
     /**
@@ -71,7 +72,9 @@ class GroupsController extends Controller
      */
     public function update(Request $request, Group $group)
     {
-        //
+        $group->fill($request->all());
+        $group->save();
+        return redirect('/admin/groups');
     }
 
     /**
