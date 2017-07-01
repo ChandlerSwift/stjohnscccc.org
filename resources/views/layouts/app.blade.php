@@ -77,7 +77,7 @@
                     <a href="/admin" class="list-group-item">Admin Home</a>
                     <a href="/admin/events" class="list-group-item">Events List</a>
                     <a href="/admin/events/create" class="list-group-item">Create New Event</a>
-                    <a href="/admin/contacts" class="list-group-item">Group Contacts</a>
+                    <a href="/admin/groups" class="list-group-item">Group Contacts</a>
                 </div>
             </div>
             <div class="col-sm-9">
