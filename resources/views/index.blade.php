@@ -45,6 +45,29 @@
 
     <div class="right_cleaner_with_10px">&nbsp;</div>
 
+    <div class="right_two_col">
+        <h2>Education and Groups</h2>
+        <div id="accordion">
+            @foreach(App\Group::all() as $group)
+                <h3>{{ $group->title }}</h3>
+                <div>
+                    <p>
+                    {{ $group->description }}
+                    </p>
+                    <p>
+                        <i>Contact: {{ $group->contact_name }} &ndash;
+                            <a href="tel:{{ $group->contact_tel }}">{{ $group->contact_tel }}</a>
+                            @if($group->contact_email)
+                                or <a href="mailto:{{ $group->contact_email }}">{{ $group->contact_email }}</a>
+                            @endif
+                        </i>
+                    </p>
+                </div>
+            @endforeach
+        </div>
+    </div>
+    
+
   </div>
   <div class="cleaner">&nbsp;</div>
 @stop

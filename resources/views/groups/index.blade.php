@@ -31,8 +31,8 @@
                         <form class="form-inline" method="POST" action="/admin/groups/{{ $group->id }}">
                             {{ csrf_field() }}
                             {{ method_field('DELETE') }}
-                            <div class="btn-group">
-                                <button class="btn btn-default" type="button" onclick="return confirm('Are you sure you want to delete this group?')">Delete</button>
+                            <div class="btn-group-vertical">
+                                <button class="btn btn-default" type="submit" onclick="return confirm('Are you sure you want to delete this group?')">Delete</button>
                                 <button type="button" class="btn btn-default" onclick='window.location.href="/admin/groups/{{ $group->id }}/edit"'>Edit</button>
                             </div>
                         </form>
