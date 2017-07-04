@@ -12,6 +12,8 @@ $user->save();
 ```
 
 ### TODO:
- * Password Changing
  * Update contact form and email
  * HTML5 Refresh?
+ * Sort css/js assets
+ * File upload for administrators?
+ * Better error handling
