@@ -67,7 +67,8 @@ class EventsController extends Controller
      */
     public function edit(Event $event)
     {
-        //
+        return view('events.edit')
+            ->with('event', $event);
     }
 
     /**
@@ -79,7 +80,10 @@ class EventsController extends Controller
      */
     public function update(Request $request, Event $event)
     {
-        //
+        $event->fill($request->all());
+        $event->save();
+        return redirect('/admin/events');
+        
     }
 
     /**
@@ -100,5 +104,16 @@ class EventsController extends Controller
         $event = Event::withTrashed()->find($id);
         $event->restore();
         return redirect('/admin/events');
+    }
+
+    /** Make a copy of an archived event */
+    public function copy($id)
+    {
+        $event = Event::find($id); // TODO: figure out why type hinting isn't working
+        $new_event = $event->replicate();
+        $new_event->date = $event->date->addYear();
+        $new_event->save();
+        return view('events.edit')
+            ->with('event', $new_event);
     }
 }

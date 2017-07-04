@@ -35,5 +35,6 @@ Route::post('password/change', 'Auth\ChangePasswordController@change')->middlewa
 // Admin Routes
 Route::get('admin', 'AdminController@index')->middleware('auth');
 Route::resource('admin/events', 'EventsController');
-Route::get('admin/events/{id}/restore', 'EventsController@restore')->middleware('auth');
+Route::get('admin/events/{id}/restore', 'EventsController@restore');
+Route::get('admin/events/{id}/copy', 'EventsController@copy');
 Route::resource('admin/groups', 'GroupsController');
