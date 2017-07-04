@@ -102,5 +102,6 @@
         $('.embedded-map iframe').css("pointer-events", "auto");
       });
     </script>
+    @yield('script')
   </body>
 </html>

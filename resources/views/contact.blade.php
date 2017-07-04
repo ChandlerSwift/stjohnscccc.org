@@ -45,3 +45,8 @@
     </table>
     </form>
 @stop
+@section('script')
+    @if(session()->has('status'))
+        <script>alert('{{ session('status') }}');</script>
+    @endif
+@endsection

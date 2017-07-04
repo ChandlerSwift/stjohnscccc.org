@@ -29,12 +29,13 @@ class SiteController extends Controller
     public function sendMessage(Request $request) {
         $valid_contacts = ['pastor', 'secretary', 'council', 'tech'];
         if (in_array($request->input('contact'), $valid_contacts)) {
-            \Mail::to('chandler@chandlerswift.com')->send(new ContactForm(
+            \Mail::to($request->input('contact') . '@stjohnscccc.org')->send(new ContactForm(
                 $from_name = $request->input('name'),
                 $from_email = $request->input('email'),
                 $message_text = $request->input('message')
             ));
-            return 'Success';
+            $request->session()->flash('status', 'Email sent successfully!');
+            return back();
         } else {
             abort(400, 'Invalid Contact');
         }
