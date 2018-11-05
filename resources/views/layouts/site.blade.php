@@ -30,6 +30,7 @@
       <div id="templatemo_content">
 
         <div id="templatemo_left">
+	  @if($events->count())
           <div id="templatemo_news_section">
             <h1>Happenings</h1>
             <div class="scrollbar" style="max-height:225px;overflow-y:auto;">
@@ -47,6 +48,7 @@
               @endforeach
             </div>
           </div>
+	  @endif
           <div id="templatemo_contact_section">
             <h1>Contact</h1>
             <div class="templatemo_contact_box">
