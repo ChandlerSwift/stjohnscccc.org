@@ -20,7 +20,7 @@
       <div id="templatemo_menu">
         <ul>
           <li><a href="/"<?php if ($_SERVER['REQUEST_URI'] == "/"): ?> class="current" <?php endif; ?>>Home</a></li>
-          <li><a href="/downloads"<?php if ($_SERVER['REQUEST_URI'] == "/downloads/"): ?> class="current" <?php endif; ?>>Newsletters and Downloads</a></li>
+          <li><a href="/downloads"<?php if ($_SERVER['REQUEST_URI'] == "/downloads/"): ?> class="current" <?php endif; ?>>Newsletters, Photos, and Downloads</a></li>
           <li><a href="https://www.youtube.com/channel/UCADuc53vyx21zzxjICn4NlQ">YouTube</a></li>
           <li><a href="/about"<?php if ($_SERVER['REQUEST_URI'] == "/about"): ?> class="current" <?php endif; ?>>About St. John&rsquo;s</a></li>
           <li><a href="/contact"<?php if ($_SERVER['REQUEST_URI'] == "/contact"): ?> class="current" <?php endif; ?> class="last">Contact Us</a></li>
