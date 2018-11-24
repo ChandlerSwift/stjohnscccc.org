@@ -31,60 +31,29 @@
       <div id="templatemo_content">
 
         <div id="templatemo_left">
-	  @if($events->count())
           <div id="templatemo_news_section">
-            <h1>Happenings</h1>
-            <div class="scrollbar" style="max-height:225px;overflow-y:auto;">
-              @foreach($events as $event)
-              <div class="templatemo_news_box">
-                <h2>{{ $event->title }}</h2>
-                <h3>{{ date("F j", strtotime($event->date)) }}</h3>
-                <p>
-                  {{ $event->description }}
-                  @if($event->link_title != "" && $event->link != "")
-                    <a href="{{ $event->link }}">{{ $event->link_title }}</a>
-                  @endif
-                </p>
+	    <h1>Register</h1>
+            <p style="text-align:center;margin-top:-20px;margin-bottom:15px;">Problems with the form? <a href="https://docs.google.com/forms/d/e/1FAIpQLSdbzuAQYHCuSE5eVXHn5aPRcaXvfp85ppkrnCowiZF-jTUlRA/viewform?usp=sf_link">Click Here!</a></p>  
+            <div class="scrollbar">
+	      <div class="templatemo_news_box" style="margin:0">
+                 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdbzuAQYHCuSE5eVXHn5aPRcaXvfp85ppkrnCowiZF-jTUlRA/viewform?embedded=true" width="300" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
               </div>
-              @endforeach
             </div>
           </div>
-	  @endif
           <div id="templatemo_contact_section">
             <h1>Contact</h1>
             <div class="templatemo_contact_box">
               <ul class="info">
-                <li>
-                  <h3 class="font-awesome-h3"><i class="fa fa-phone"></i></h3>
-                  <p>Church: <a href="tel:320-587-5104">320-587-5104</a><br/>Pastor: <a href="tel:612-644-0628">612-644-0628</a></p>
-                </li>
-                <li>
-                  <h3 class="font-awesome-h3"><i class="fa fa-home"></i></h3>
-                  <p><a href="https://www.google.com/maps/place/13372+Nature+Ave,+Hutchinson,+MN+55350">13372 Nature Ave<br/>Hutchinson, MN 55350</a></p>
-                </li>
-                <li>
+		<li>
                   <h3 class="font-awesome-h3"><i class="fa fa-envelope"></i></h3>
-                  <p>
-                    <a href="mailto:secretary@stjohnscccc.org">secretary@stjohnscccc.org</a>
-                    <br/>
-                    <a href="mailto:pastor@stjohnscccc.org">pastor@stjohnscccc.org</a>
-                  </p>
-                </li>
-                <li>
-                  <h3 class="font-awesome-h3"><i class="fa fa-video-camera"></i></h3>
-                  <p>
-                    <a href="https://www.youtube.com/channel/UCADuc53vyx21zzxjICn4NlQ">Check us out on YouTube:<br/>
-                      VBS, music, and more!</a>
+                  <p>Andrea Wigern, Event Coordinator<br>
+                    <a href="mailto:artsyannie2001@yahoo.com">artsyannie2001@yahoo.com</a>
                   </p>
                 </li>
               </ul>
             </div>
           </div>
-          <!-- note to self: use this! It's cool
-               <div class="left_col_section">
-               <a href="subpage.html"><img src="images/templatemo_ca.jpg" alt="Church Activities" border="0" /></a>
-               </div> -->
-        </div> <!-- end of left -->
+        </div>
 
         <div id="templatemo_right">
           @yield('content')

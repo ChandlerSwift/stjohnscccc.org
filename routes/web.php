@@ -38,3 +38,7 @@ Route::resource('admin/events', 'EventsController');
 Route::get('admin/events/{id}/restore', 'EventsController@restore');
 Route::get('admin/events/{id}/copy', 'EventsController@copy');
 Route::resource('admin/groups', 'GroupsController');
+
+Route::get('/conference', function() {
+	return view('conference');
+});
