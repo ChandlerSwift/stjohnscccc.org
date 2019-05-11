@@ -23,8 +23,7 @@
           <li><a href="/downloads"<?php if ($_SERVER['REQUEST_URI'] == "/downloads/"): ?> class="current" <?php endif; ?>>Newsletters, Photos, and Downloads</a></li>
           <li><a href="https://www.youtube.com/channel/UCADuc53vyx21zzxjICn4NlQ">YouTube</a></li>
           <li><a href="/about"<?php if ($_SERVER['REQUEST_URI'] == "/about"): ?> class="current" <?php endif; ?>>About St. John&rsquo;s</a></li>
-          <li><a href="/contact"<?php if ($_SERVER['REQUEST_URI'] == "/contact"): ?> class="current" <?php endif; ?>>Contact Us</a></li>
-          <li><a href="/conference"<?php if ($_SERVER['REQUEST_URI'] == "/conference"): ?> class="current" <?php endif; ?> class="last">Conference</a></li>
+          <li><a href="/contact"<?php if ($_SERVER['REQUEST_URI'] == "/contact"): ?> class="current" <?php endif; ?> class="last">Contact Us</a></li>
         </ul>
       </div>
 
