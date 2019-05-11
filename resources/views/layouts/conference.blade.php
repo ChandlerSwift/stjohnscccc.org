@@ -33,7 +33,7 @@
         <div id="templatemo_left">
           <div id="templatemo_news_section">
 	    <h1>Register</h1>
-            <p style="text-align:center;margin-top:-20px;margin-bottom:15px;">Problems with the form? <a href="https://docs.google.com/forms/d/e/1FAIpQLSdbzuAQYHCuSE5eVXHn5aPRcaXvfp85ppkrnCowiZF-jTUlRA/viewform?usp=sf_link">Click Here!</a></p>  
+	    <p style="text-align:center;margin-top:-20px;margin-bottom:5px;font-size:1.3em">Problems with the form? <a href="https://docs.google.com/forms/d/e/1FAIpQLSdbzuAQYHCuSE5eVXHn5aPRcaXvfp85ppkrnCowiZF-jTUlRA/viewform?usp=sf_link">Click Here! <i style="float:none;font-size:inherit;color:inherit;" class="fa fa-external-link"></i></a></p>  
             <div class="scrollbar">
 	      <div class="templatemo_news_box" style="margin:0">
                  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdbzuAQYHCuSE5eVXHn5aPRcaXvfp85ppkrnCowiZF-jTUlRA/viewform?embedded=true" width="300" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
