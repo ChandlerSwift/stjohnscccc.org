@@ -12,7 +12,7 @@
   <body>
     <div id="templatemo_container">
     <div style="background-color:lemonchiffon; font-size:18px; line-height: 150%; padding: 20px; text-align: center; margin-bottom: 20px;">Due to the increased risk of illness from the coronavirus outbreak, St. John's has made the decision to cancel all services and activities starting March 15. Instead, online services will be streamed on YouTube at the usual times. <a href="https://youtube.com/channel/UCADuc53vyx21zzxjICn4NlQ">Click this link to access our YouTube channel</a>.</div>
-    <div style="background-color:yellow; font-size:24px; line-height: 150%; padding: 20px; text-align: center; margin-bottom: 20px;"><b>He is risen!</b> Watch our service on YouTube: <a href="https://www.youtube.com/playlist?list=PLeZJuZyIXR7egm4aQNkA-nInQZe5ScD58">Click this link to watch it on YouTube</a>.</div>
+    <div style="background-color:yellow; font-size:24px; line-height: 150%; padding: 20px; text-align: center; margin-bottom: 20px;"><b>He is risen!</b> Watch our Easter service: <a href="https://www.youtube.com/playlist?list=PLeZJuZyIXR7egm4aQNkA-nInQZe5ScD58">Click this link to watch it on YouTube</a>.</div>
       <div id="templatemo_header">
         <img src="/images/header.jpg" usemap="#map" />
         <map name="map">
