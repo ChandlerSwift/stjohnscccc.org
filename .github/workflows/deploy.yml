@@ -17,7 +17,7 @@ jobs:
       run: |
         mkdir -p $HOME/.ssh
         cat <<< $SSH_PRIVATE_KEY > $HOME/.ssh/id_rsa
-        chmod 600 $HOME/.ssh/id_rsa.pub
+        chmod 600 $HOME/.ssh/id_rsa
         ssh-keyscan -H chandlerswift.com >> ~/.ssh/known_hosts
 
     - name: Deploy
