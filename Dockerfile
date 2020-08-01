@@ -18,4 +18,4 @@ RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-av
 	php artisan migrate && \
 	chown -R www-data:www-data storage
 
-ENTRYPOINT php artisan key:generate && apache2-foreground
+ENTRYPOINT composer install && php artisan key:generate && apache2-foreground
