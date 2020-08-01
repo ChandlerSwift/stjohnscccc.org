@@ -15,5 +15,7 @@ RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-av
 	a2enmod rewrite && \
 	usermod -u 1000 www-data && \
 	groupmod -g 1000 www-data && \
-	php artisan migrate && php artisan key:generate && \
+	php artisan migrate && \
 	chown -R www-data:www-data storage
+
+ENTRYPOINT php artisan key:generate && apache2-foreground
