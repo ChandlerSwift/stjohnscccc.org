@@ -16,7 +16,7 @@ class AppServiceProvider extends ServiceProvider
     {
         View::share('events', \App\Event::where('date', '>', \Carbon\Carbon::now())
                                         ->orderBy('date', 'asc')
-					/*->take(2)*/->get());
+                                        /*->take(2)*/->get());
     }
 
     /**
