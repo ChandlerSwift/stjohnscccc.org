@@ -18,4 +18,4 @@ jobs:
         ssh-keyscan -H cerium.chandlerswift.com >> ~/.ssh/known_hosts
 
     - name: Deploy
-      run: ssh cerium.chandlerswift.com "cd /var/www/stjohnscccc.org; git pull; docker stop stjohnscccc; docker build -t stjohnscccc .; docker run -p 127.0.0.1:8000:80 -d --mount type=bind,source=/var/www/stjohnscccc.org,destination=/app stjohnscccc"
+      run: ssh chandler@cerium.chandlerswift.com "cd /var/www/stjohnscccc.org; git pull; docker stop stjohnscccc; docker build -t stjohnscccc .; docker run -p 127.0.0.1:8000:80 -d --mount type=bind,source=/var/www/stjohnscccc.org,destination=/app stjohnscccc"
