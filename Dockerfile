@@ -2,7 +2,7 @@ FROM php:apache
 
 WORKDIR /app
 
-COPY composer.* ./
+COPY . .
 
 ENV APACHE_DOCUMENT_ROOT /app/public
 RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/*.conf && \
@@ -11,9 +11,9 @@ RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-av
 	apt-get update && apt-get install -y unzip && \
 	curl -s https://getcomposer.org/installer | php 1> /dev/null && \
 	mv composer.phar /bin/composer && \
-	composer install --no-autoloader && \
-	a2enmod rewrite
-
-COPY . .
-
-RUN composer install && php artisan migrate && php artisan key:generate && chown -R www-data:www-data storage
+	composer install && \
+	a2enmod rewrite && \
+	usermod -u 1000 www-data && \
+	groupmod -g 1000 www-data && \
+	php artisan migrate && php artisan key:generate && \
+	chown -R www-data:www-data storage
