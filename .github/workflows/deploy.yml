@@ -1,0 +1,21 @@
+name: auto-deploy
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Set up SSH key
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+      run: |
+        mkdir -p $HOME/.ssh
+        cat <<< $SSH_PRIVATE_KEY > $HOME/.ssh/id_rsa
+        chmod 600 $HOME/.ssh/id_rsa
+        ssh-keyscan -H cerium.chandlerswift.com >> ~/.ssh/known_hosts
+
+    - name: Deploy
+      run: ssh cerium.chandlerswift.com "cd /var/www/stjohnscccc.org; git pull; docker stop stjohnscccc; docker build -t stjohnscccc .; docker run -p 127.0.0.1:8000:80 -d --mount type=bind,source=/var/www/stjohnscccc.org,destination=/app stjohnscccc"
