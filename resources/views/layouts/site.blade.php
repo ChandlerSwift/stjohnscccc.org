@@ -11,7 +11,7 @@
   </head>
   <body>
     <div id="templatemo_container">
-    <div style="background-color:lemonchiffon; font-size:18px; line-height: 150%; padding: 20px; text-align: center; margin-bottom: 20px;">Worshipping at St John's has begun again with parking lot and indoor services. Contact a council member or Pastor Bob for details. Pastor Bob will also continue to post Wednesday night Bible study and Sunday morning worship services on YouTube. <a href="https://youtube.com/channel/UCADuc53vyx21zzxjICn4NlQ">Click this link to access our YouTube channel</a>.</div>
+    <div style="background-color:lemonchiffon; font-size:18px; line-height: 150%; padding: 20px; text-align: center; margin-bottom: 20px;">Worshipping at St John's has begun again with parking lot and indoor services. Contact a council member or Pastor Bob for details. Pastor Bob will also continue to post Wednesday night Bible study and Sunday morning worship services on YouTube. <a href="https://youtube.com/channel/UCADuc53vyx21zzxjICn4NlQ">Click this link to access our YouTube channel</a>. Or you can <a href="https://christianworldmedia.com/livesite/StJohnsCCCC">watch live streamed Sunday services at christianworldmedia.com</a>.</div>
     <div id="templatemo_header">
         <img src="/images/header.jpg" usemap="#map" />
         <map name="map">
