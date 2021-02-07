@@ -11,7 +11,8 @@ RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-av
 	sed -ri -e 's!StartServers.*!StartServers 1!' /etc/apache2/mods-enabled/mpm_prefork.conf && \
 	sed -ri -e 's!MinSpareServers.*!MinSpareServers 1!' /etc/apache2/mods-enabled/mpm_prefork.conf && \
 	sed -ri -e 's!MaxSpareServers.*!MaxSpareServers 1!' /etc/apache2/mods-enabled/mpm_prefork.conf && \
-	apt-get update && apt-get install -y unzip libpng-dev zlib1g-dev && \
+	apt-get update && apt-get install -y unzip libpng-dev libjpeg-dev zlib1g-dev && \
+	docker-php-ext-configure gd --with-jpeg && \
 	docker-php-ext-install gd && \
 	curl -s https://getcomposer.org/installer | php 1> /dev/null && \
 	mv composer.phar /bin/composer && \
