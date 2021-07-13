@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- @includeIf('version') -->
 <html>
   <head>
     <title>St. John&rsquo;s Church &ndash; Biscay, MN</title>
