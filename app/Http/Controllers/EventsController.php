@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use App\Event;
 
 class EventsController extends Controller
@@ -44,7 +45,11 @@ class EventsController extends Controller
      */
     public function store(Request $request)
     {
-        \App\Event::create($request->all())->save();
+        $event = \App\Event::create($request->all());
+        if (!Str::startsWith($event->link, ['https://', 'http://', 'mailto:'])) {
+            $event->link = 'https://' . $event->link;
+        }
+        $event->save();
         return redirect('/admin/events');
     }
 
@@ -81,6 +86,9 @@ class EventsController extends Controller
     public function update(Request $request, Event $event)
     {
         $event->fill($request->all());
+        if (!Str::startsWith($event->link, ['https://', 'http://', 'mailto:'])) {
+            $event->link = 'https://' . $event->link;
+        }
         $event->save();
         return redirect('/admin/events');
         
