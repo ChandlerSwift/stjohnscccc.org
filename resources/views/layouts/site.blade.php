@@ -56,7 +56,7 @@
               <ul class="info">
                 <li>
                   <h3 class="font-awesome-h3"><i class="fa fa-phone"></i></h3>
-                  <p>Church: <a href="tel:320-587-5104">320-587-5104</a><br/>Pastor: <a href="tel:612-644-0628">612-644-0628</a></p>
+                  <p>Church: <a href="tel:320-587-5104">320-587-5104</a><br/><!--Pastor: <a href="tel:612-644-0628">612-644-0628</a>--></p>
                 </li>
                 <li>
                   <h3 class="font-awesome-h3"><i class="fa fa-home"></i></h3>
@@ -67,7 +67,7 @@
                   <p>
                     <a href="mailto:secretary@stjohnscccc.org">secretary@stjohnscccc.org</a>
                     <br/>
-                    <a href="mailto:pastor@stjohnscccc.org">pastor@stjohnscccc.org</a>
+                    <!--<a href="mailto:pastor@stjohnscccc.org">pastor@stjohnscccc.org</a>-->
                   </p>
                 </li>
                 <li>
