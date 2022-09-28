@@ -3,8 +3,20 @@
   <div class="right_col_section">
     <div id="welcome_title"></div>
     <p>
-      <img src="images/pastor.jpg" alt="Rev. Robert Taylor" />
-      Thank you for visiting our church's website.  St. John's is a welcoming, bible-centered church in rural McLeod County.  God has richly blessed and continues to bless this small country church.  In 2015 we celebrated the 150th anniversary of our existence as a congregation.  Given our rich history, we continue to look forward to what the Lord will do in and through us as a congregation for decades to come.  The leaders and members of our church are deeply committed to biblical truth and a desire to honor the Lord Jesus Christ in all that we do and stand for.  If you have a chance to visit our church, I trust, you too will sense that the Spirit of God inhabits this place and this people. <i>&mdash;Bob Taylor, Pastor</i></p>
+      <!-- <img src="images/pastor.jpg" alt="Rev. Robert Taylor" /> -->
+      Thank you for visiting our church's website.
+      We believe that there has never been a better time to serve Jesus and receive the word of Christ.
+      We'd be happy for you to make this your place of worship, and feel free to ask any questions you'd like.
+      St. John's is a welcoming, bible-centered church in rural McLeod County.
+      God has richly blessed and continues to bless this small country church.
+      In 2015 we celebrated the 150th anniversary of our existence as a congregation.
+      Given our rich history, we continue to look forward to what the Lord will do in and through us as a congregation for decades to come.
+      The leaders and members of our church are deeply committed to biblical truth and a desire to honor the Lord Jesus Christ in all that we do and stand for.
+      If you have a chance to visit our church, I trust, you too will sense that the Spirit of God inhabits this place and this people.
+    </p>
+    <p>
+    Matthew 11:28: “Come to me, all you who are weary and burdened, and I will give you rest.”
+    </p>
   </div>
   <div class="cleaner_with_height">&nbsp;</div>
 
