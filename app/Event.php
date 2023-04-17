@@ -11,10 +11,7 @@ class Event extends Model
 
     protected $guarded = [];
 
-    protected $dates = [
-        'created_at',
-        'updated_at',
-        'deleted_at',
-        'date',
+    protected $casts = [
+        'date' => 'datetime',
     ];
 }
