@@ -42,3 +42,7 @@ Route::resource('admin/groups', 'GroupsController');
 Route::get('/conference', function() {
 	return view('conference');
 });
+
+Route::get('/vbs', function() {
+	return redirect("https://www.myvbs.org/StJohnsCCCC/");
+});
