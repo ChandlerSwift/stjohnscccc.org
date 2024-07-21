@@ -34,7 +34,7 @@
 	  @if($events->count())
           <div id="templatemo_news_section">
             <h1>Happenings</h1>
-            <div class="scrollbar" style="max-height:300px;overflow-y:auto;">
+            <div class="scrollbar">
               @foreach($events as $event)
               <div class="templatemo_news_box">
                 <h2>{{ $event->title }}</h2>
