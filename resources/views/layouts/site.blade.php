@@ -23,8 +23,7 @@
           <li><a href="/"<?php if ($_SERVER['REQUEST_URI'] == "/"): ?> class="current" <?php endif; ?>>Home</a></li>
           <li><a href="/downloads"<?php if ($_SERVER['REQUEST_URI'] == "/downloads/"): ?> class="current" <?php endif; ?>>Newsletters, Photos, and Downloads</a></li>
           <li><a href="https://www.youtube.com/channel/UCADuc53vyx21zzxjICn4NlQ">YouTube</a></li>
-          <li><a href="/about" class="<?php if ($_SERVER['REQUEST_URI'] == "/about"): ?> current<?php endif; ?>">About St. John&rsquo;s</a></li>
-          <li><a href="https://www.surveymonkey.com/r/MKTMLG9" class="last">Register for Kidz JAM</a></li>
+          <li><a href="/about" class="last <?php if ($_SERVER['REQUEST_URI'] == "/about"): ?>current<?php endif; ?>">About St. John&rsquo;s</a></li>
           <!-- <li><a href="/contact"<?php if ($_SERVER['REQUEST_URI'] == "/contact"): ?> class="current" <?php endif; ?> class="last">Contact Us</a></li> -->
         </ul>
       </div>
