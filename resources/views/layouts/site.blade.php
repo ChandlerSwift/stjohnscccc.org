@@ -50,13 +50,30 @@
             </div>
           </div>
 	  @endif
+          <div id="sermon_section">
+            <h1>Latest video</h1>
+            <iframe id="youtube_video" width="280" height="210" frameborder="0" allowfullscreen></iframe>
+            <script async>
+              document.addEventListener('DOMContentLoaded', async function() {
+                const channelID = 'UCADuc53vyx21zzxjICn4NlQ';
+                const youtubeEndpoint = `https://www.youtube.com/feeds/videos.xml?channel_id=${channelID}`;
+                const jsonEndpoint = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(youtubeEndpoint)}`;
+                const res = await fetch(jsonEndpoint);
+                const data = await res.json();
+                const link = data.items[0].link;
+                const id = link.substr(link.indexOf("=")+1);
+                document.getElementById('youtube_video').setAttribute("src", `https://youtube.com/embed/${id}?controls=0&showinfo=0&rel=0`);
+              });
+            </script>
+          </div>
           <div id="templatemo_contact_section">
             <h1>Contact</h1>
             <div class="templatemo_contact_box">
               <ul class="info">
                 <li>
                   <h3 class="font-awesome-h3"><i class="fa fa-phone"></i></h3>
-                  <p>Church: <a href="tel:320-587-5104">320-587-5104</a><br/><!--Pastor: <a href="tel:612-644-0628">612-644-0628</a>--></p>
+                  <p>Pastor: <a href="tel:320-368-0889">320-368-0889</a>
+                  <br/>Church: <a href="tel:320-587-5104">320-587-5104</a></p>
                 </li>
                 <li>
                   <h3 class="font-awesome-h3"><i class="fa fa-home"></i></h3>
@@ -65,9 +82,9 @@
                 <li>
                   <h3 class="font-awesome-h3"><i class="fa fa-envelope"></i></h3>
                   <p>
-                    <a href="mailto:secretary@stjohnscccc.org">secretary@stjohnscccc.org</a>
+                    <a href="mailto:pastorbjornb@gmail.com">pastorbjornb@gmail.com</a>
                     <br/>
-                    <!--<a href="mailto:pastor@stjohnscccc.org">pastor@stjohnscccc.org</a>-->
+                    <a href="mailto:secretary@stjohnscccc.org">secretary@stjohnscccc.org</a>
                   </p>
                 </li>
                 <li>
@@ -80,10 +97,6 @@
               </ul>
             </div>
           </div>
-          <!-- note to self: use this! It's cool
-               <div class="left_col_section">
-               <a href="subpage.html"><img src="images/templatemo_ca.jpg" alt="Church Activities" border="0" /></a>
-               </div> -->
         </div> <!-- end of left -->
 
         <div id="templatemo_right">
