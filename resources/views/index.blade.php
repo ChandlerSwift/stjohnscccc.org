@@ -27,7 +27,7 @@
   <div class="right_col_section">
     <div class="right_two_col">
       <h2>Worship Information</h2>
-      <h3>This Sunday: {{ $worship_time }}</h3>
+      <h3>{{ $is_summer_time ? "Regular summer hours" : "Regular winter hours" }}: {{ $worship_time }}</h3>
       <p><a onclick ="more();" style="cursor:pointer;display:none;font-style:italic;color:#bbb;" id="time-link">More Information&hellip;</a></p>
       <div id="time-paragraph" style="max-width:300px;font-size:inherit;font-style:inherit;">
         <p>

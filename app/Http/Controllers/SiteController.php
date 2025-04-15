@@ -15,7 +15,8 @@ class SiteController extends Controller
         $memorial_day = Carbon::parse('last monday of may this year -1week');
         $is_summer_time = Carbon::now() > $memorial_day && Carbon::now() < $labor_day;
         return view('index')
-            ->with('worship_time', $is_summer_time ? "9:30am Worship" : "9am Bible Study, 10:30am Worship");
+            ->with('worship_time', $is_summer_time ? "9:30am Worship" : "9am Bible Study, 10:30am Worship")
+            ->with('is_summer_time', $is_summer_time);
     }
 
     public function about() {
