@@ -22,8 +22,8 @@ class EventsController extends Controller
     public function index()
     {
         return view('events.index')
-            ->with('events', \App\Event::where('date', '>', \Carbon\Carbon::now())->get())
-            ->with('archived_events', \App\Event::where('date', '<', \Carbon\Carbon::now())->get())
+            ->with('events', \App\Event::upcoming()->get())
+            ->with('archived_events', \App\Event::past()->get())
             ->with('deleted_events', \App\Event::onlyTrashed()->get());
     }
 
@@ -120,6 +120,9 @@ class EventsController extends Controller
         $event = Event::find($id); // TODO: figure out why type hinting isn't working
         $new_event = $event->replicate();
         $new_event->date = $event->date->addYear();
+        if ($event->end_date) {
+            $new_event->end_date = $event->end_date->addYear();
+        }
         $new_event->save();
         return view('events.edit')
             ->with('event', $new_event);

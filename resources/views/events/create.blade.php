@@ -13,6 +13,10 @@
             <input id="dateInput" class="form-control" type="date" name="date" required>
         </div>
         <div class="form-group">
+            <label>End Date (Optional)</label>
+            <input id="endDateInput" class="form-control" type="date" name="end_date">
+        </div>
+        <div class="form-group">
             <label>Description</label>
             <textarea class="form-control" name="description" required></textarea>
         </div>
@@ -32,6 +36,14 @@
     <script>
         $(function(){
             $('#dateInput').datepicker({
+                startDate: "Today",
+                startView: 1,
+                maxViewMode: 2,
+                autoclose: true,
+                todayHighlight: true,
+                format: "yyyy-mm-dd",
+            });
+            $('#endDateInput').datepicker({
                 startDate: "Today",
                 startView: 1,
                 maxViewMode: 2,

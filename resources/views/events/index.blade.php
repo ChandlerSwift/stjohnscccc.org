@@ -7,6 +7,7 @@
             <tr>
                 <th>Title</th>
                 <th>Date</th>
+                <th>End Date</th>
                 <th>Description</th>
                 <th>Link Title</th>
                 <th>Link Address</th>
@@ -16,6 +17,7 @@
                 <tr>
                     <td>{{ $event->title }}</td>
                     <td>{{ $event->date->toFormattedDateString() }}</td>
+                    <td>{{ $event->end_date ? $event->end_date->toFormattedDateString() : '' }}</td>
                     <td>{{ $event->description }}</td>
                     <td>{{ $event->link_title }}</td>
                     <td>
@@ -43,6 +45,7 @@
             <tr>
                 <th>Title</th>
                 <th>Date</th>
+                <th>End Date</th>
                 <th>Description</th>
                 <th>Link Title</th>
                 <th>Link Address</th>
@@ -52,6 +55,7 @@
                 <tr>
                     <td>{{ $event->title }}</td>
                     <td>{{ $event->date->toFormattedDateString() }}</td>
+                    <td>{{ $event->end_date ? $event->end_date->toFormattedDateString() : '' }}</td>
                     <td>{{ $event->description }}</td>
                     <td>{{ $event->link_title }}</td>
                     <td>
@@ -71,6 +75,7 @@
             <tr>
                 <th>Title</th>
                 <th>Date</th>
+                <th>End Date</th>
                 <th>Description</th>
                 <th>Link Title</th>
                 <th>Link Address</th>
@@ -80,6 +85,7 @@
                 <tr>
                     <td>{{ $event->title }}</td>
                     <td>{{ $event->date->toFormattedDateString() }}</td>
+                    <td>{{ $event->end_date ? $event->end_date->toFormattedDateString() : '' }}</td>
                     <td>{{ $event->description }}</td>
                     <td>{{ $event->link_title }}</td>
                     <td>

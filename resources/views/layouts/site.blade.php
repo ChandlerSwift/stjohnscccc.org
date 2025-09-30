@@ -38,7 +38,7 @@
               @foreach($events as $event)
               <div class="templatemo_news_box">
                 <h2>{{ $event->title }}</h2>
-                <h3>{{ date("F j", strtotime($event->date)) }}</h3>
+                <h3>{{ date("F j", strtotime($event->date)) }}@if($event->end_date)&ndash;{{ date("F j", strtotime($event->end_date)) }}@endif</h3>
                 <p>
                   {{ $event->description }}
                   @if($event->link_title != "" && $event->link != "")
