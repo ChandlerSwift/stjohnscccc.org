@@ -52,19 +52,7 @@
 	  @endif
           <div id="sermon_section">
             <h1>Latest video</h1>
-            <iframe id="youtube_video" width="280" height="210" frameborder="0" allowfullscreen></iframe>
-            <script async>
-              document.addEventListener('DOMContentLoaded', async function() {
-                const channelID = 'UCADuc53vyx21zzxjICn4NlQ';
-                const youtubeEndpoint = `https://www.youtube.com/feeds/videos.xml?channel_id=${channelID}`;
-                const jsonEndpoint = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(youtubeEndpoint)}`;
-                const res = await fetch(jsonEndpoint);
-                const data = await res.json();
-                const link = data.items[0].link;
-                const id = link.substr(link.indexOf("=")+1);
-                document.getElementById('youtube_video').setAttribute("src", `https://youtube.com/embed/${id}?controls=0&showinfo=0&rel=0`);
-              });
-            </script>
+            <iframe id="youtube_video" width="280" height="210" frameborder="0" allowfullscreen src="https://www.youtube-nocookie.com/embed?listType=playlist&list=UUADuc53vyx21zzxjICn4NlQ"></iframe>
           </div>
           <div id="templatemo_contact_section">
             <h1>Contact</h1>
